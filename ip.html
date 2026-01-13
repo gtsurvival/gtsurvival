@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title id="in0y7a-2-2">GTsurvival • PAGE TITLE</title>
-  <meta charset="UTF-8" id="ijmake-2-2"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" id="i6fqiv-2-2"/>
-  <meta name="robots" content="index,follow"/>
-  <meta name="generator" content="GrapesJS Studio"/>
-  <!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet" id="ipgyfy-2-2"/>
-<!-- SAME CSS -->
-<link rel="stylesheet" href="style.css" id="ii6flg-2-2"/>
-  <link rel="stylesheet" href="./style.css">
-  </head>
-  <body id="icwvkm"><!-- NAV (shared across all pages) --><header id="i6n3az" class="nav"><div id="ifxgla-2-2" class="logo">GT<span id="ids50h-2-2">Survival</span></div><nav id="inui7h-2-2"><a href="./index.html" id="ii3jyl-2-2">Home</a><a href="./rules.html" id="iy7pxi-2-2">Rules</a><a href="./ip.html" id="ibe57e-2-2">Join</a><a href="https://discord.gg/tAB56cybqE" id="isfrqa-2-2">Discord</a></nav></header><!-- PAGE HEADER --><section id="iw87ui" class="hero"><h1 id="i0d8ed-2-2">IP</h1><p id="i90pdg-2-2">You can watch a youtube tutorial on how to join on bedrock.</p></section><!-- PAGE CONTENT --><section id="ia1w7f" class="features"><!-- CONTENT CARD --><div id="ifrpcy-2-2" type="button" aria-label="Minecraft Java IP. Click to copy." tabindex="0" data-js="copy-btn" class="card card-btn"><span role="heading" aria-level="3" id="i27l99-2" class="card-btn-title">Minecraft Java</span><span id="i4u7o9-2" aria-live="polite" class="card-btn-text">Click to copy.</span></div><div id="ifmnh6-2-2" type="button" aria-label="Minecraft Bedrock IP. Click to copy. Port 11439." tabindex="0" data-js="copy-btn" data-copy="Minecraft Bedrock — Port: 11439" class="card card-btn"><span role="heading" aria-level="3" id="iq5xhg-2" class="card-btn-title">Minecraft Bedrock</span><span id="i8d3jg-2" aria-live="polite" class="card-btn-text">Click to copy. (Port: 11439)</span></div></section><!-- FOOTER --><footer id="irgz1s"><p id="i9606v-2-2">© 2026 GTSurvival • Not affiliated with Mojang Studios or Microsoft</p></footer><script>
-(function () {
-  const javaBtn = document.getElementById('ifrpcy-2-2');
-  const bedrockBtn = document.getElementById('ifmnh6-2-2');
-
-  const javaText = document.getElementById('i4u7o9-2');
-  const bedrockText = document.getElementById('i8d3jg-2');
-
-  if (!javaBtn || !bedrockBtn) return;
-
-  const JAVA_IP = 'image-perspective.gl.joinmc.link';
-  const BEDROCK_IP = 'nov-watches.gl.at.ply.gg:11439';
-
-  function copy(text, labelEl, btn) {
-    const original = labelEl.textContent;
-
-    navigator.clipboard.writeText(text).then(() => {
-      labelEl.textContent = 'Copied!';
-      btn.setAttribute('aria-label', 'Copied');
-
-      setTimeout(() => {
-        labelEl.textContent = original;
-        btn.setAttribute('aria-label', original);
-      }, 1500);
-    });
-  }
-
-  function attach(btn, labelEl, value) {
-    btn.addEventListener('click', () => copy(value, labelEl, btn));
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        copy(value, labelEl, btn);
-      }
-    });
-  }
-
-  attach(javaBtn, javaText, JAVA_IP);
-  attach(bedrockBtn, bedrockText, BEDROCK_IP);
-})();
-</script></body>
+   <head>
+      <title id="in0y7a-2-2">GTsurvival • Join</title>
+      <meta charset="UTF-8" id="ijmake-2-2"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" id="i6fqiv-2-2"/>
+      <meta name="robots" content="index,follow"/>
+      <meta name="generator" content="GrapesJS Studio"/>
+      <!-- Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet" id="ipgyfy-2-2"/>
+      <!-- SAME CSS -->
+      <link rel="stylesheet" href="style.css" id="ii6flg-2-2"/>
+      <link rel="stylesheet" href="./style.css">
+   </head>
+   <body id="icwvkm">
+      <!-- NAV (shared across all pages) -->
+      <header id="i6n3az" class="nav">
+                  <div id="ix18g-2" class="logo"><a href="./index.html" aria-label="Go to GTSurvival Home" id="ivpdgk" class="logo-link">
+            GT<span id="i3dch-2">Survival</span></a>
+         </div>
+         <nav id="inui7h-2-2"><a href="./index.html" id="ii3jyl-2-2">Home</a><a href="./rules.html" id="iy7pxi-2-2">Rules</a><a href="./ip.html" id="ibe57e-2-2">Join</a><a href="https://discord.gg/tAB56cybqE" id="isfrqa-2-2">Discord</a></nav>
+      </header>
+      <!-- PAGE HEADER -->
+      <section id="iw87ui" class="hero">
+         <h1 id="i0d8ed-2-2">IP</h1>
+         <p id="i90pdg-2-2">You can watch a youtube tutorial on how to join on bedrock.</p>
+      </section>
+      <!-- PAGE CONTENT -->
+      <section id="ia1w7f" class="features">
+         <!-- CONTENT CARD -->
+         <div id="ifrpcy-2-2" type="button" aria-label="Minecraft Java IP. Click to copy." tabindex="0" data-js="copy-btn" class="card card-btn"><span role="heading" aria-level="3" id="i27l99-2" class="card-btn-title">Minecraft Java</span><span id="i4u7o9-2" aria-live="polite" class="card-btn-text">Click to copy.</span></div>
+         <div id="ifmnh6-2-2" type="button" aria-label="Minecraft Bedrock IP. Click to copy. Port 11439." tabindex="0" data-js="copy-btn" data-copy="Minecraft Bedrock — Port: 11439" class="card card-btn"><span role="heading" aria-level="3" id="iq5xhg-2" class="card-btn-title">Minecraft Bedrock</span><span id="i8d3jg-2" aria-live="polite" class="card-btn-text">Click to copy. (Port: 11439)</span></div>
+      </section>
+      <!-- FOOTER -->
+      <footer id="irgz1s">
+         <p id="i9606v-2-2">© 2026 GTSurvival • Not affiliated with Mojang Studios or Microsoft</p>
+      </footer>
+      <script>
+         (function () {
+           const javaBtn = document.getElementById('ifrpcy-2-2');
+           const bedrockBtn = document.getElementById('ifmnh6-2-2');
+         
+           const javaText = document.getElementById('i4u7o9-2');
+           const bedrockText = document.getElementById('i8d3jg-2');
+         
+           if (!javaBtn || !bedrockBtn) return;
+         
+           const JAVA_IP = 'image-perspective.gl.joinmc.link';
+           const BEDROCK_IP = 'nov-watches.gl.at.ply.gg:11439';
+         
+           function copy(text, labelEl, btn) {
+             const original = labelEl.textContent;
+         
+             navigator.clipboard.writeText(text).then(() => {
+               labelEl.textContent = 'Copied!';
+               btn.setAttribute('aria-label', 'Copied');
+         
+               setTimeout(() => {
+                 labelEl.textContent = original;
+                 btn.setAttribute('aria-label', original);
+               }, 1500);
+             });
+           }
+         
+           function attach(btn, labelEl, value) {
+             btn.addEventListener('click', () => copy(value, labelEl, btn));
+             btn.addEventListener('keydown', (e) => {
+               if (e.key === 'Enter' || e.key === ' ') {
+                 e.preventDefault();
+                 copy(value, labelEl, btn);
+               }
+             });
+           }
+         
+           attach(javaBtn, javaText, JAVA_IP);
+           attach(bedrockBtn, bedrockText, BEDROCK_IP);
+         })();
+      </script>
+   </body>
 </html>
