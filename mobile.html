@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GTSurvival • Minecraft Server</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: sticky;
+  top: 0;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: rgba(2,6,23,0.9);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4ade80;
+}
+.logo span { color: #e5e7eb; }
+
+nav {
+  display: flex;
+  gap: 18px;
+}
+
+nav a {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #cbd5f5;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav a.active {
+  background: rgba(74,222,128,0.2);
+  color: #4ade80;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  display: none;
+  min-height: calc(100svh - 80px); /* mobile safe */
+  padding: 40px 20px;
+}
+
+section.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== HOME HERO ===== */
+.hero {
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.hero h1 span { color: #4ade80; }
+
+.hero p {
+  color: #9ca3af;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+/* ===== BUTTONS ===== */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;          /* 🔥 FIX */
+  align-items: center;           /* 🔥 FIX */
+  justify-content: center;       /* 🔥 FIX */
+  height: auto;                  /* 🔥 FIX */
+}
+
+.btn-primary {
+  background: #4ade80;
+  color: #022c22;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #e5e7eb;
+}
+
+/* ===== CONTENT BOX ===== */
+.box {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(30,41,59,.7);
+  padding: 28px;
+  border-radius: 18px;
+}
+
+/* ===== TEXT ===== */
+h2 {
+  color: #4ade80;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.rules ul li {
+  margin-bottom: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .hero-buttons { flex-direction: column; }
+  .btn { width: 100%; max-width: 320px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">GT<span>Survival</span></div>
+  <nav>
+    <a class="active" onclick="showSection('home', this)">Home</a>
+    <a onclick="showSection('rules', this)">Rules</a>
+    <a onclick="showSection('join', this)">Join</a>
+    <a onclick="showSection('discord', this)">Discord</a>
+  </nav>
+</header>
+
+<section id="home" class="active hero">
+  <h1>Welcome to <span>GTSurvival</span></h1>
+  <p>Pure survival. Smooth gameplay. Chill community.</p>
+  <p style="margin-top:20px;font-size:13px;color:#94a3b8;">
+  You are viewing an unofficial mobile version.
+</p>
+
+<div class="hero-buttons">
+  <button class="btn btn-primary" onclick="copyIP()">Copy IP</button>
+
+  <a class="btn btn-secondary" href="https://discord.gg/tAB56cybqE" target="_blank">
+    Join Discord
+  </a>
+
+  <a class="btn btn-secondary" href="./index.html">
+    View Official Site
+  </a>
+</div>
+
+</section>
+
+<section id="rules">
+  <div class="box rules">
+    <h2>📜 GTSurvival Rules</h2>
+    <ul>
+      <li>💡 These rules apply to both Minecraft and Discord. Follow them to keep the community fun and fair for everyone!</li>
+      <li>🛑 1. No Hacking, Cheating, or X-Ray : Play fair — no unfair mods like X-ray, fly hacks, auto-clickers, etc</li>
+      <li>🤝 2. Respect Other Players : No griefing, trolling, or stealing. Be chill and protect your base</li>
+      <li>⚔️ 3. PvP = Mutual Only : No spawn-killing or PvP spam. PvP must be agreed by both sides</li>
+      <li>🚷 4. Keep It Appropriate : No inappropriate structures or NSFW builds. Be creative, not cursed!</li>
+      <li>💬 5. Keep Chat Friendly : No swearing at others, toxic behavior, or spam. Respect everyone</li>
+      <li>🛡️ 6. Claim Your Land! : Use a golden shovel to claim land. Unclaimed = at your own risk!</li>
+      <li>🐞 7. No Bug Abuse or Duping : Found a glitch? Report it. Don’t abuse it or get banned</li>
+      <li>🧑‍⚖️ 8. Staff Decisions Are Final : If you think something was unfair, open a ticket or DM staff</li>
+      <li>🐄 9. Don’t Lag the Server : Avoid huge redstone clocks, mob farms with 200 cows, etc</li>
+      <li>🎉 10. Have Fun & Build Your Story : This is your world too — survive, build, roleplay, explore!</li>
+      <li>🤯 11. Do not dm me if you were warned</li>
+      <li>💢12. Do not login as another player account without permission</li>
+      <li>🏠13. Do not destroy any of the admin houses</li>
+    </ul>
+  </div>
+</section>
+
+<section id="join">
+  <div class="box">
+    <h2>Join the Server</h2>
+    <p><b>Java:</b> image-perspective.gl.joinmc.link</p>
+    <p><b>Bedrock:</b> nov-watches.gl.at.ply.gg</p>
+    <p><b>Port:</b> 11439</p>
+  </div>
+</section>
+
+<section id="discord">
+  <div class="box">
+    <h2>Join our Discord</h2>
+    <p>Be part of the GTSurvival community.</p>
+    <br>
+    <a class="btn btn-primary" href="https://discord.gg/tAB56cybqE" target="_blank">Join Discord</a>
+  </div>
+</section>
+
+<footer>
+© 2026 GTSurvival. Not affiliated with Mojang Studios or Microsoft.
+Mobile layout by a community contributor.
+</footer>
+
+<script>
+function copyIP() {
+  const ip = "nov-watches.gl.at.ply.gg";
+  navigator.clipboard?.writeText(ip)
+    .then(() => alert("IP copied: " + ip))
+    .catch(() => prompt("Copy manually:", ip));
+}
+
+function showSection(id, el) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
