@@ -278,3 +278,40 @@ footer {
 .mobile-btn {
   margin-top: 12px;
 }
+#igwad {
+  background: transparent;
+  color: var(--text, #e6e8f0);
+  border: 1px solid var(--card, #1c2030);
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#igwad:hover {
+  background: #4cffb3; 
+  color: #000;
+  border-color: #4cffb3;
+  box-shadow: 0 0 20px rgba(76, 255, 179, 0.5);
+  transform: translateY(-2px);
+}
+
+.hero-buttons .secondary {
+  background: transparent;
+  color: var(--text, #e6e8f0);
+  border: 1px solid var(--card, #1c2030);
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.hero-buttons .secondary:hover {
+  background: rgba(76, 255, 179, 0.12);
+  border-color: #4cffb3;
+  color: #4cffb3;
+  box-shadow: 0 0 12px rgba(76, 255, 179, 0.25);
+  transform: translateY(-2px);
+}
