@@ -85,12 +85,21 @@ html {
 	padding: 0;
 }
 
+html, body {
+	height: 100%;
+}
+
 body {
 	font-family: 'Inter', sans-serif;
 	background: var(--bg);
 	color: var(--text);
 	line-height: 1.6;
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
+
 
 .nav {
 	display: flex;
@@ -314,4 +323,96 @@ footer {
   color: #4cffb3;
   box-shadow: 0 0 12px rgba(76, 255, 179, 0.25);
   transform: translateY(-2px);
+}
+.features .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+/* ===== STORE BUTTON ===== */
+.store-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 30px;
+  border-radius: 16px;
+
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: #022c22;
+
+  background: linear-gradient(
+    135deg,
+    #4ade80,
+    #22c55e
+  );
+
+  box-shadow:
+    0 0 18px rgba(74,222,128,.45),
+    inset 0 0 0 1px rgba(255,255,255,.15);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease,
+    filter .2s ease;
+}
+
+/* glow sweep */
+.store-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,.4),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+/* hover */
+.store-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 0 30px rgba(74,222,128,.65),
+    inset 0 0 0 1px rgba(255,255,255,.25);
+}
+
+.store-btn:hover::after {
+  opacity: 1;
+}
+
+/* click */
+.store-btn:active {
+  transform: scale(1);
+  box-shadow: 0 0 15px rgba(74,222,128,.4);
+}
+/* make card buttons match hero secondary buttons */
+.card .secondary {
+  background: transparent;
+  color: var(--text, #e6e8f0);
+  border: 1px solid var(--card, #1c2030);
+  padding: 12px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 14px;
+  transition: all 0.25s ease;
+}
+
+.card .secondary:hover {
+  background: rgba(76, 255, 179, 0.12);
+  border-color: #4cffb3;
+  color: #4cffb3;
+  box-shadow: 0 0 12px rgba(76, 255, 179, 0.25);
+  transform: translateY(-2px);
+}
+footer {
+	margin-top: auto;
 }
