@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+   <head>
+      <title>GTSurvival - เข้าเล่น</title>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="robots" content="index,follow"/>
+      <meta name="generator" content="GrapesJS Studio"/>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="style.css"/>
+      <link rel="stylesheet" href="./style.css">
+   </head>
+   <body id="icwvkm">
+      <header id="i6n3az" class="nav">
+         <div id="ix18g-2" class="logo"><a href="./index%20th.html" aria-label="ไปยังหน้าแรกของ GTSurvival" id="ivpdgk" class="logo-link">
+            GT<span id="i3dch-2">Survival</span></a>
+         </div>
+         <nav id="inui7h-2-2"><a href="./index%20th.html" id="ii3jyl-2-2">หน้าแรก</a><a href="./rules%20th.html" id="iy7pxi-2-2">กฎ</a><a href="./ip%20th.html" id="ibe57e-2-2">เข้าเล่น</a><a href="./discord%20th.html" id="ivmxi">ดิสคอร์ด</a></nav>
+      </header>
+      <section id="iw87ui" class="hero">
+         <h1 id="i0d8ed-2-2">IP</h1>
+         <p id="i90pdg-2-2">คุณสามารถดูวิดีโอสอนบน YouTube เพื่อเรียนรู้วิธีเข้าเล่นบน Bedrock ได้</p>
+      </section>
+      <section id="ia1w7f" class="features">
+         <div id="ifrpcy-2-2" type="button" aria-label="Minecraft Java IP คลิกเพื่อคัดลอก" tabindex="0" data-js="copy-btn" class="card card-btn"><span role="heading" aria-level="3" id="i27l99-2" class="card-btn-title">Minecraft Java</span><span id="i4u7o9-2" aria-live="polite" class="card-btn-text">คลิกเพื่อคัดลอก</span></div>
+         <div id="ifmnh6-2-2" type="button" aria-label="Minecraft Bedrock IP คลิกเพื่อคัดลอก พอร์ต 11439" tabindex="0" data-js="copy-btn" data-copy="Minecraft Bedrock - Port: 11439" class="card card-btn"><span role="heading" aria-level="3" id="iq5xhg-2" class="card-btn-title">Minecraft Bedrock</span><span id="i8d3jg-2" aria-live="polite" class="card-btn-text">คลิกเพื่อคัดลอก (พอร์ต: 11439)</span></div>
+      </section>
+      <footer id="irgz1s">
+         <p id="i9606v-2-2">© 2026 GTSurvival. ไม่ได้มีความเกี่ยวข้องกับ Mojang Studios หรือ Microsoft</p>
+      </footer>
+      <script>
+         (function () {
+           const javaBtn = document.getElementById('ifrpcy-2-2');
+           const bedrockBtn = document.getElementById('ifmnh6-2-2');
+         
+           const javaText = document.getElementById('i4u7o9-2');
+           const bedrockText = document.getElementById('i8d3jg-2');
+         
+           if (!javaBtn || !bedrockBtn) return;
+         
+           const JAVA_IP = 'image-perspective.gl.joinmc.link';
+           const BEDROCK_IP = 'nov-watches.gl.at.ply.gg:11439';
+         
+           function copy(text, labelEl, btn) {
+             const original = labelEl.textContent;
+         
+             navigator.clipboard.writeText(text).then(() => {
+               labelEl.textContent = 'คัดลอกแล้ว!';
+               btn.setAttribute('aria-label', 'คัดลอกแล้ว');
+         
+               setTimeout(() => {
+                 labelEl.textContent = original;
+                 btn.setAttribute('aria-label', original);
+               }, 1500);
+             });
+           }
+         
+           function attach(btn, labelEl, value) {
+             btn.addEventListener('click', () => copy(value, labelEl, btn));
+             btn.addEventListener('keydown', (e) => {
+               if (e.key === 'Enter' || e.key === ' ') {
+                 e.preventDefault();
+                 copy(value, labelEl, btn);
+               }
+             });
+           }
+         
+           attach(javaBtn, javaText, JAVA_IP);
+           attach(bedrockBtn, bedrockText, BEDROCK_IP);
+         })();
+      </script>
+   </body>
+</html>
